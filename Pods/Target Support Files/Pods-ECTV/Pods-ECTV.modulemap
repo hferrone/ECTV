@@ -1,0 +1,6 @@
+framework module Pods_ECTV {
+  umbrella header "Pods-ECTV-umbrella.h"
+
+  export *
+  module * { export * }
+}

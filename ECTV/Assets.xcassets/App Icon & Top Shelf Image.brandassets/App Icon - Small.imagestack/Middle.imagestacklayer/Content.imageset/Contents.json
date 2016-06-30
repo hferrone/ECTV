@@ -2,6 +2,7 @@
   "images" : [
     {
       "idiom" : "tv",
+      "filename" : "ECTV_icon_small.png",
       "scale" : "1x"
     }
   ],

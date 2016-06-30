@@ -1,25 +1,177 @@
 <?xml version="1.0" encoding="UTF-8" standalone="no"?>
-<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="6185.10" systemVersion="14A360a" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="NO" initialViewController="BYZ-38-t0r">
+<document type="com.apple.InterfaceBuilder.AppleTV.Storyboard" version="3.0" toolsVersion="10117" systemVersion="15F34" targetRuntime="AppleTV" propertyAccessControl="none" useAutolayout="YES" initialViewController="rxG-SJ-1QD">
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="6181.2"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="10085"/>
+        <capability name="Constraints to layout margins" minToolsVersion="6.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <mutableArray key="Georgia.ttf">
+            <string>Georgia</string>
+            <string>Georgia</string>
+            <string>Georgia</string>
+            <string>Georgia</string>
+        </mutableArray>
+    </customFonts>
     <scenes>
-        <!--View Controller-->
+        <!--Intro View Controller-->
+        <scene sceneID="oSQ-ng-Q29">
+            <objects>
+                <viewController id="rxG-SJ-1QD" customClass="IntroViewController" customModule="ECTV" customModuleProvider="target" sceneMemberID="viewController">
+                    <layoutGuides>
+                        <viewControllerLayoutGuide type="top" id="S7c-lD-joY"/>
+                        <viewControllerLayoutGuide type="bottom" id="ZgA-kA-Z4X"/>
+                    </layoutGuides>
+                    <view key="view" contentMode="scaleToFill" id="qkr-4L-YGf">
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ectvIcon" translatesAutoresizingMaskIntoConstraints="NO" id="JYU-xY-UBq">
+                                <rect key="frame" x="703" y="286" width="515" height="362"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="515" id="Swy-cF-nTH"/>
+                                </constraints>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="69O-8a-qoI">
+                                <rect key="frame" x="840" y="888" width="241" height="86"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="241" id="sk9-qN-wbX"/>
+                                </constraints>
+                                <inset key="contentEdgeInsets" minX="40" minY="20" maxX="40" maxY="20"/>
+                                <state key="normal" title="WATCH"/>
+                                <connections>
+                                    <action selector="segueToMainScreen:" destination="rxG-SJ-1QD" eventType="primaryActionTriggered" id="jfJ-sT-Nbb"/>
+                                </connections>
+                            </button>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="The sky above the port was the color of television, tuned to a dead channel." textAlignment="center" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="87V-4l-CXI">
+                                <rect key="frame" x="703" y="672" width="515" height="68"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="68" id="i2a-l2-TIW"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" name="HelveticaNeue-ThinItalic" family="Helvetica Neue" pointSize="25"/>
+                                <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                        </subviews>
+                        <constraints>
+                            <constraint firstItem="JYU-xY-UBq" firstAttribute="centerX" secondItem="qkr-4L-YGf" secondAttribute="centerX" id="4VK-Eo-dlO"/>
+                            <constraint firstItem="JYU-xY-UBq" firstAttribute="top" secondItem="S7c-lD-joY" secondAttribute="bottom" constant="286" id="5p2-Ed-w7b"/>
+                            <constraint firstItem="87V-4l-CXI" firstAttribute="centerX" secondItem="69O-8a-qoI" secondAttribute="centerX" id="Alb-nh-sT5"/>
+                            <constraint firstItem="JYU-xY-UBq" firstAttribute="leading" secondItem="87V-4l-CXI" secondAttribute="leading" id="Avh-0M-iCf"/>
+                            <constraint firstItem="87V-4l-CXI" firstAttribute="top" secondItem="JYU-xY-UBq" secondAttribute="bottom" constant="24" id="J1D-Wc-OWV"/>
+                            <constraint firstItem="JYU-xY-UBq" firstAttribute="centerY" secondItem="qkr-4L-YGf" secondAttribute="centerY" constant="-73" id="Mfd-cK-gaQ"/>
+                            <constraint firstItem="JYU-xY-UBq" firstAttribute="trailing" secondItem="87V-4l-CXI" secondAttribute="trailing" id="m2m-fu-XYy"/>
+                            <constraint firstItem="69O-8a-qoI" firstAttribute="top" secondItem="87V-4l-CXI" secondAttribute="bottom" constant="148" id="qtP-nT-w9B"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <segue destination="BYZ-38-t0r" kind="show" identifier="segueToMainScreenID" id="fZ1-kg-rWP"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="oSA-g8-WaM" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="100" y="712"/>
+        </scene>
+        <!--Main View Controller-->
         <scene sceneID="tne-QT-ifu">
             <objects>
-                <viewController id="BYZ-38-t0r" customClass="ViewController" customModuleProvider="target" sceneMemberID="viewController">
+                <viewController id="BYZ-38-t0r" customClass="MainViewController" customModule="ECTV" customModuleProvider="target" sceneMemberID="viewController">
                     <layoutGuides>
                         <viewControllerLayoutGuide type="top" id="y3c-jy-aDJ"/>
                         <viewControllerLayoutGuide type="bottom" id="wfy-db-euE"/>
                     </layoutGuides>
                     <view key="view" contentMode="scaleToFill" id="8bC-Xf-vdC">
-                        <rect key="frame" x="0.0" y="0.0" width="480" height="480"/>
+                        <rect key="frame" x="0.0" y="0.0" width="1920" height="1080"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <view contentMode="scaleToFill" misplaced="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ef8-vU-r5v">
+                                <rect key="frame" x="8" y="0.0" width="1920" height="1080"/>
+                                <subviews>
+                                    <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="line" translatesAutoresizingMaskIntoConstraints="NO" id="RW6-vz-BsN">
+                                        <rect key="frame" x="-8" y="326" width="1920" height="30"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="30" id="1Bd-AH-Mda"/>
+                                        </constraints>
+                                    </imageView>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Weo-GU-yqq">
+                                        <rect key="frame" x="127" y="70" width="1359" height="108"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="108" id="ppR-AN-zdE"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="85"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Time" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="49Z-6R-Zzu">
+                                        <rect key="frame" x="127" y="186" width="1359" height="89"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="89" id="55w-pB-v6P"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="55"/>
+                                        <color key="textColor" red="1" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Title" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Cgc-a2-ban">
+                                        <rect key="frame" x="127" y="399" width="1359" height="135"/>
+                                        <constraints>
+                                            <constraint firstAttribute="height" constant="135" id="f8R-Fa-seR"/>
+                                            <constraint firstAttribute="width" constant="1359" id="iBp-TF-Aeu"/>
+                                        </constraints>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="75"/>
+                                        <color key="textColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <textView clipsSubviews="YES" multipleTouchEnabled="YES" userInteractionEnabled="NO" contentMode="scaleToFill" editable="NO" textAlignment="natural" selectable="NO" translatesAutoresizingMaskIntoConstraints="NO" id="em0-Mn-e7a">
+                                        <rect key="frame" x="102" y="527" width="1556" height="472"/>
+                                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="calibratedWhite"/>
+                                        <constraints>
+                                            <constraint firstAttribute="width" constant="1556" id="CHr-hM-5Mv"/>
+                                        </constraints>
+                                        <string key="text">Lorem ipsum dolor sit er elit lamet, consectetaur cillium adipisicing pecu, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Nam liber te conscient to factor tum poen legum odioque civiuda.</string>
+                                        <fontDescription key="fontDescription" name="Georgia" family="Georgia" pointSize="35"/>
+                                        <textInputTraits key="textInputTraits" autocapitalizationType="sentences"/>
+                                    </textView>
+                                </subviews>
+                                <constraints>
+                                    <constraint firstAttribute="bottom" secondItem="em0-Mn-e7a" secondAttribute="bottom" constant="81" id="04r-ed-9Yj"/>
+                                    <constraint firstItem="RW6-vz-BsN" firstAttribute="trailing" secondItem="ef8-vU-r5v" secondAttribute="trailingMargin" id="1a2-ug-aEE"/>
+                                    <constraint firstItem="Weo-GU-yqq" firstAttribute="trailing" secondItem="49Z-6R-Zzu" secondAttribute="trailing" id="6c3-L2-VuN"/>
+                                    <constraint firstItem="Weo-GU-yqq" firstAttribute="leading" secondItem="Cgc-a2-ban" secondAttribute="leading" id="D6z-zY-ccg"/>
+                                    <constraint firstItem="Weo-GU-yqq" firstAttribute="leading" secondItem="49Z-6R-Zzu" secondAttribute="leading" id="DVP-WC-szO"/>
+                                    <constraint firstItem="Cgc-a2-ban" firstAttribute="top" secondItem="RW6-vz-BsN" secondAttribute="bottom" constant="43" id="Eci-oN-C6T"/>
+                                    <constraint firstItem="Weo-GU-yqq" firstAttribute="top" secondItem="ef8-vU-r5v" secondAttribute="top" constant="70" id="L48-p5-Smk"/>
+                                    <constraint firstItem="RW6-vz-BsN" firstAttribute="leading" secondItem="ef8-vU-r5v" secondAttribute="leading" constant="-8" id="LeR-yW-Dv3"/>
+                                    <constraint firstItem="49Z-6R-Zzu" firstAttribute="top" secondItem="Weo-GU-yqq" secondAttribute="bottom" constant="8" id="Mva-cg-R9d"/>
+                                    <constraint firstItem="Weo-GU-yqq" firstAttribute="trailing" secondItem="Cgc-a2-ban" secondAttribute="trailing" id="bWu-fs-GGZ"/>
+                                    <constraint firstItem="em0-Mn-e7a" firstAttribute="top" secondItem="Cgc-a2-ban" secondAttribute="bottom" constant="-7" id="fkd-fz-pso"/>
+                                    <constraint firstItem="RW6-vz-BsN" firstAttribute="top" secondItem="49Z-6R-Zzu" secondAttribute="bottom" constant="51" id="gxN-Lg-fro"/>
+                                    <constraint firstItem="Weo-GU-yqq" firstAttribute="leading" secondItem="ef8-vU-r5v" secondAttribute="leading" constant="127" id="hTU-MK-8oz"/>
+                                    <constraint firstItem="em0-Mn-e7a" firstAttribute="leading" secondItem="Cgc-a2-ban" secondAttribute="leading" constant="-25" id="n7Q-yn-m1H"/>
+                                </constraints>
+                            </view>
+                        </subviews>
                         <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="calibratedWhite"/>
+                        <constraints>
+                            <constraint firstItem="ef8-vU-r5v" firstAttribute="leading" secondItem="8bC-Xf-vdC" secondAttribute="leading" id="88L-jU-OB2"/>
+                            <constraint firstItem="ef8-vU-r5v" firstAttribute="top" secondItem="y3c-jy-aDJ" secondAttribute="bottom" id="Y8Y-EK-vxg"/>
+                            <constraint firstAttribute="trailing" secondItem="ef8-vU-r5v" secondAttribute="trailing" id="iG1-jU-yYZ"/>
+                            <constraint firstItem="ef8-vU-r5v" firstAttribute="bottom" secondItem="wfy-db-euE" secondAttribute="top" id="pVI-ps-tpx"/>
+                        </constraints>
                     </view>
+                    <connections>
+                        <outlet property="descriptionTextView" destination="em0-Mn-e7a" id="Ov5-Tf-c5O"/>
+                        <outlet property="endDateLabel" destination="49Z-6R-Zzu" id="2aV-yq-VDq"/>
+                        <outlet property="slideshowView" destination="ef8-vU-r5v" id="kf5-1C-Yje"/>
+                        <outlet property="startDateLabel" destination="Weo-GU-yqq" id="6RR-0c-swf"/>
+                        <outlet property="titleLabel" destination="Cgc-a2-ban" id="GFV-xt-ZML"/>
+                    </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="dkx-z0-nzr" sceneMemberID="firstResponder"/>
             </objects>
+            <point key="canvasLocation" x="2282" y="679"/>
         </scene>
     </scenes>
+    <resources>
+        <image name="ectvIcon" width="183" height="155"/>
+        <image name="line" width="960" height="13"/>
+    </resources>
 </document>
